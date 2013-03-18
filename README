@@ -2,7 +2,10 @@ Sistema para Gestão de Pedidos e Entregas
 
 Introdução
 ==========
-Esse documento tem o objetivo de armazenar e organizar informações básicas relativas ao Sistema para Gestão da Entrega de Cestas das Mães desenvolvido para a Fundação Espírita Cárita - FEC. Há alguns os anos a FEC produz e vende cestas de café da manhã para serem entregues no dia das mães. A renda desse trabalho é revertida para a manutenção das crianças do Lar-Escola Terezinha Delamare.
+Esse documento tem o objetivo de armazenar e organizar informações básicas relativas ao Sistema para Gestão 
+da Entrega de Cestas das Mães desenvolvido para a Fundação Espírita Cárita - FEC. Há alguns os anos a FEC 
+produz e vende cestas de café da manhã para serem entregues no dia das mães. A renda desse trabalho é revertida 
+para a manutenção das crianças do Lar-Escola Terezinha Delamare.
 
 Descrição do Processo de Trabalho
 =================================
@@ -14,12 +17,16 @@ Esta descrição apresenta uma visão geral de todo o processo:
 						  --> Montar Cestas
 								    --> Realizar Entrega
 
-A demanda pelo desenvolvimento do sistema surgiu para tentar facilitar e organizar as atividades realizadas pelas pessoas envolvidas com esse trabalho. O sistema permite a gestão dos pedidos de cestas, vendedores, entregadores e roteiros de entrega.
+A demanda pelo desenvolvimento do sistema surgiu para tentar facilitar e organizar as atividades realizadas 
+pelas pessoas envolvidas com esse trabalho. O sistema permite a gestão dos pedidos de cestas, vendedores, 
+entregadores e roteiros de entrega.
 
 Descrição da Solução Tecnológica com Infraestrutura remota (cloud)
 ==================================================================
 
-O sistema desenvolvido é uma aplicação Web desenvolvida na linguagem python usando o framework Django (https://www.djangoproject.com) e utilizando a infraestrutura oferecida pelo site (https://www.pythonanywhere.com). Inicialmente está sendo usada uma conta sem custos e com recursos mínimos.
+O sistema desenvolvido é uma aplicação Web desenvolvida na linguagem python usando o framework Django 
+(https://www.djangoproject.com) e utilizando a infraestrutura oferecida pelo site (https://www.pythonanywhere.com).
+Inicialmente está sendo usada uma conta sem custos e com recursos mínimos.
 
 Para acessar a aplicação:
 http://paulovn.pythonanywhere.com/admin
