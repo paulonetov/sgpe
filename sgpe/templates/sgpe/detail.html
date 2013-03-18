@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>detail.html : /home/paulovn/SGPE/sgpe/templates/sgpe/detail.html : Editor : paulovn : PythonAnywhere</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="detail.html : /home/paulovn/SGPE/sgpe/templates/sgpe/detail.html : Editor : paulovn : PythonAnywhere">
+        <meta name="author" content="PythonAnywhere LLP">
+        <meta name="google-site-verification" content="O4UxDrfcHjC44jybs2vajc1GgRkTKCTRgVzeV6I9V14" />
+
+        <!-- Le styles -->
+        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="/static/anywhere/styles/bootstrap_base.css" rel="stylesheet">
+        
+    <link rel="stylesheet" href="/static/anywhere/styles/editor.css" type="text/css" media="screen" charset="utf-8" />
+    
+
+        <link rel="stylesheet" href="/static/jquery/jquery-ui-1.8.11.custom.css" type="text/css" media="screen" charset="utf-8" />
+        
+        <style type="text/css">
+            body {
+                height: auto;
+            }
+        </style>
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    </head>
+
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div id="id_internal_nav_bar_container" class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><img id="id_logo" src="/static/anywhere/images/logo-234x35.png" height="35" title="PythonAnywhere logo" alt="PythonAnywhere logo" /></a>
+                    <div class="nav-collapse">
+                        <ul id="id_header_links" class="nav">
+                            <li><a id="id_feedback_link" class='feedback_link' href="">Send feedback</a></li>
+                            <li><a id="id_forums_link" href="/forums/">Forums</a></li>
+                            <li><a href="/help/" id="id_help_link">Help</a></li>
+                            <li><a href="http://blog.pythonanywhere.com/" id="id_blog_link">Blog</a></li>
+                            
+                            
+                                <li><a href="/user/paulovn/" id="id_dashboard_link">Dashboard</a></li>
+                                <li><a href="/user/paulovn/account/" id="id_account_link">Account</a></li>
+                                <li><a href="/logout" id="id_logout_link">Log out</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-container" id="id_dummy"></div>
+
+        
+
+        
+
+<div>
+
+    <div id="id_editor_toolbar">
+
+      <span id="id_breadcrumbs_div">
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/">/</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home">home</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home/paulovn">paulovn</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home/paulovn/SGPE">SGPE</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home/paulovn/SGPE/sgpe">sgpe</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home/paulovn/SGPE/sgpe/templates">templates</a> &gt;
+            
+                <a class="breadcrumbs_link" href="/user/paulovn/files/home/paulovn/SGPE/sgpe/templates/sgpe">sgpe</a> &gt;
+            
+        <span id="id_file_name">detail.html</span>
+        <span id="id_unsaved_changes_spacer">
+          <span id="id_unsaved_changes" class="pa_hidden">*</span>
+        </span>
+      </span>
+      <img src="/static/anywhere/images/spinner-small.gif" class="pa_hidden" id="id_save_spinner" />
+
+      <button class="btn" id="id_save">Save</button>
+      
+      
+          <span id="id_keyboard_shortcuts"><a href="#">Keyboard shortcuts</a></span>
+      
+      <span id="id_save_error" class="error_message pa_hidden">There was an error saving</span>
+    </div>
+    <div class="clear"></div>
+
+    
+          <div id="id_editor">&lt;h1&gt;{{ pedido.codigoRecibo }}&lt;/h1&gt;
+
+{% if error_message %}&lt;p&gt;&lt;strong&gt;{{ error_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}
+
+&lt;form action=&quot;/sgpe/{{ pedido.id }}/vote/&quot; method=&quot;post&quot;&gt;
+{% csrf_token %}
+{% for choice in poll.choice_set.all %}
+    &lt;input type=&quot;radio&quot; name=&quot;choice&quot; id=&quot;choice{{ forloop.counter }}&quot; value=&quot;{{ choice.id }}&quot; /&gt;
+    &lt;label for=&quot;choice{{ forloop.counter }}&quot;&gt;{{ choice.choice }}&lt;/label&gt;&lt;br /&gt;
+{% endfor %}
+&lt;input type=&quot;submit&quot; value=&quot;Vote&quot; /&gt;
+&lt;/form&gt;
+</div>
+    
+
+    <div id="id_find_dialog" class="pa_hidden">
+        <p class="form-inline">Find: <input id="id_find_dialog_find_input" /></p>
+        <div class="dialog_buttons">
+          <a class="btn" id="id_find_dialog_replace_link">Replace</a>
+          <button class="btn" id="id_find_dialog_find_button">Find</button>
+          <button class="btn" id="id_find_dialog_close_button">Close</button>
+        </div>
+    </div>
+
+    <div id="id_replace_dialog" class="pa_hidden">
+      <table>
+        <tr class="form-inline">
+          <td>Replace:</td>
+          <td><input id="id_replace_dialog_find_input" /></td>
+        </tr>
+        <tr class="form-inline">
+          <td>With:</td>
+          <td><input id="id_replace_dialog_replace_input" /></td>
+        </tr>
+      </table>
+        <div class="dialog_buttons">
+          <button class="btn" id="id_replace_dialog_find_button">Find</button>
+          <button class="btn" id="id_replace_dialog_replace_button">Replace</button>
+          <button class="btn" id="id_replace_dialog_replace_all_button">Replace All</button>
+          <button class="btn" id="id_replace_dialog_close_button">Close</button>
+        </div>
+    </div>
+
+    <div id="id_go_to_line_dialog" class="pa_hidden">
+        <p class="form-inline">Line number: <input id="id_go_to_line_dialog_input" /></p>
+        <div class="dialog_buttons">
+            <button class="btn" id="id_go_to_line_dialog_ok_button">Go</button>
+            <button class="btn" id="id_go_to_line_dialog_close_button">Close</button>
+        </div>
+    </div>
+
+    <div id="id_editor_keyboard_shortcuts_dialog" class="pa_hidden">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>PC (Windows/Linux)</th><th>Mac</th><th>action</th></tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td>Ctrl-L</td> <td>center selection</td></tr>
+                <tr><td>Ctrl-Alt-Down</td><td>Command-Option-Down</td><td>copy lines down</td>
+                </tr> <tr><td>Ctrl-Alt-Up</td><td> Command-Option-Up   </td><td>copy lines up</td></tr>
+                <tr><td>Ctrl-F</td><td>    Command-F   </td><td>find</td></tr>
+                <tr><td>Ctrl-K</td><td> Command-G   </td><td>find next</td></tr>
+                <tr><td>Ctrl-Shift-K</td><td>  Command-Shift-G </td><td>find previous</td></tr>
+                <tr><td>Down</td><td>  Down,Ctrl-N </td><td>go line down</td></tr>
+                <tr><td>Up</td><td> Up,Ctrl-P   </td><td>go line up</td></tr>
+                <tr><td>Ctrl-End,Ctrl-Down</td><td>   Command-End,Command-Down    </td><td>go to end</td></tr>
+                <tr><td>Left</td><td>  Left,Ctrl-B </td><td>go to left</td></tr>
+                <tr><td>Ctrl-L</td><td>   Command-L   </td><td>go to line</td></tr>
+                <tr><td>Alt-Right,End</td><td>    Command-Right,End,Ctrl-E    </td><td>go to line end</td></tr>
+                <tr><td>Alt-Left,Home</td><td>    Command-Left,Home,Ctrl-A    </td><td>go to line start</td></tr>
+                <tr><td>PageDown</td><td>   Option-PageDown,Ctrl-V  </td><td>go to page down</td></tr>
+                <tr><td>PageUp</td><td>  Option-PageUp   </td><td>go to page up</td></tr>
+                <tr><td>Right</td><td> Right,Ctrl-F    </td><td>go to right</td></tr>
+                <tr><td>Ctrl-Home,Ctrl-Up</td><td>   Command-Home,Command-Up </td><td>go to start</td></tr>
+                <tr><td>Ctrl-Left</td><td>   Option-Left </td><td>go to word left</td></tr>
+                <tr><td>Ctrl-Right</td><td>  Option-Right    </td><td>go to word right</td></tr>
+                <tr><td>Tab</td> <td>Tab</td> <td>indent</td></tr>
+                <tr><td>Alt-Down</td><td>  Option-Down </td><td>move lines down</td></tr>
+                <tr><td>Alt-Up</td><td>  Option-Up   </td><td>move lines up</td></tr>
+                <tr><td>Shift-Tab</td><td> Shift-Tab   </td><td>outdent</td></tr>
+                <tr><td>Insert</td><td>  Insert  </td><td>overwrite</td></tr>
+                <tr><td></td><td>PageDown</td><td>  pagedown</td></tr>
+                <tr><td></td><td>PageUp</td><td>  pageup</td></tr>
+                <tr><td>Ctrl-Shift-Z,Ctrl-Y</td><td>   Command-Shift-Z,Command-Y   </td><td>redo</td></tr>
+                <tr><td>Ctrl-D</td><td> Command-D   </td><td>remove line</td></tr>
+                <tr><td></td><td>Ctrl-K</td><td>  remove to line end</td></tr>
+                <tr><td></td><td>Option-Backspace</td><td>  remove to linestart</td></tr>
+                <tr><td></td><td>Alt-Backspace,Ctrl-Alt-Backspace</td><td> remove word left</td></tr>
+                <tr><td></td><td>Alt-Delete</td><td>  remove word right</td></tr>
+                <tr><td>Ctrl-R</td><td> Command-Option-F    </td><td>replace</td></tr>
+                <tr><td>Ctrl-Shift-R</td><td>    Command-Shift-Option-F  </td><td>replace all</td></tr>
+                <tr><td>Ctrl-S</td><td>  Command-S   </td><td>save</td></tr>
+                <tr><td>Ctrl-A</td><td>  Command-A   </td><td>select all</td></tr>
+                <tr><td>Shift-Down</td><td>   Shift-Down  </td><td>select down</td></tr>
+                <tr><td>Shift-Left</td><td>  Shift-Left  </td><td>select left</td></tr>
+                <tr><td>Shift-End</td><td>   Shift-End   </td><td>select line end</td></tr>
+                <tr><td>Shift-Home</td><td>  Shift-Home  </td><td>select line start</td></tr>
+                <tr><td>Shift-PageDown</td><td>    Shift-PageDown  </td><td>select page down</td></tr>
+                <tr><td>Shift-PageUp</td><td>   Shift-PageUp    </td><td>select page up</td></tr>
+                <tr><td>Shift-Right</td><td>  Shift-Right </td><td>select right</td></tr>
+                <tr><td>Ctrl-Shift-End,Alt-Shift-Down</td><td>  Command-Shift-Down  </td><td>select to end</td></tr>
+                <tr><td>Alt-Shift-Right</td><td>   Command-Shift-Right </td><td>select to line end</td></tr>
+                <tr><td>Alt-Shift-Left</td><td>   Command-Shift-Left  </td><td>select to line start</td></tr>
+                <tr><td>Ctrl-Shift-Home,Alt-Shift-Up</td><td>   Command-Shift-Up    </td><td>select to start</td></tr>
+                <tr><td>Shift-Up</td><td>    Shift-Up    </td><td>select up</td></tr>
+                <tr><td>Ctrl-Shift-Left</td><td>   Option-Shift-Left   </td><td>select word left</td></tr>
+                <tr><td>Ctrl-Shift-Right</td><td>   Option-Shift-Right  </td><td>select word right</td></tr>
+                <tr><td></td><td>Ctrl-O</td><td>    split line</td></tr>
+                <tr><td>Ctrl-7</td><td>    Command-7   </td><td>toggle comment</td></tr>
+                <tr><td>Ctrl-T</td><td>   Ctrl-T  </td><td>transpose letters</td></tr>
+                <tr><td>Ctrl-Z</td><td>    Command-Z   </td><td>undo</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+        <div id="id_footer" class="container">
+
+            <footer id="id_copyright_div">
+                <p>
+                    Copyright &copy; 2013 PythonAnywhere LLP
+                    &mdash;
+                    <a href="/terms/">Terms and Conditions</a>.
+                    "Python" is a registered trademark of the Python Software Foundation.
+                </p>
+            </footer>
+
+        </div>
+
+        
+        
+
+        <div id="id_feedback_dialog" title="Help us improve" style="display:none">
+    <div id="id_feedback_dialog_blurb_big" class="dialog_blurb_big">
+        It's always a pleasure to hear from you!
+    </div>
+    <div id="id_feedback_dialog_blurb_small">
+        Ask us a question, or tell us what you love or hate about PythonAnywhere:
+    </div>
+    <textarea id="id_feedback_dialog_text" rows="6"></textarea>
+    <input id="id_feedback_dialog_email_address" type="text" class="default_prompt"/>
+    <div id="id_feedback_dialog_error" class="pa_hidden">
+        Sorry, there was an error connecting to the server. <br/>Please try again in a few moments...
+    </div>
+    <div class="dialog_buttons">
+        <img id="id_feedback_dialog_spinner" src="/static/anywhere/images/spinner-small.gif" />
+        <button class="btn btn-primary" id="id_feedback_dialog_ok_button">OK</button>
+        <button class="btn" id="id_feedback_dialog_cancel_button">Cancel</button>
+    </div>
+</div>
+
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="/static/jquery/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/static/jquery/jquery-ui-1.8.11.custom.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-transition.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-alert.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-dropdown.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-scrollspy.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-tab.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-tooltip.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-popover.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-button.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-collapse.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-carousel.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-typeahead.js"></script>
+
+        <script type="text/javascript">
+            var urls = {};
+        </script>
+        <script type="text/javascript" src="/static/anywhere/scripts/ajax_utils.js"></script>
+
+        <script type="text/javascript" src="/static/anywhere/scripts/feedback_dialog.js"></script>
+        
+        <script type="text/javascript">
+            $(function() {
+                $.extend(
+                    urls,
+                    {
+                        feedback: '/feedback/submit/'
+                    }
+                );
+                
+                    Anywhere.FeedbackDialog.Initialise(urls, false);
+                
+            });
+        </script>
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-18014859-6']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+        
+    <script src="/static/ace/ace.js" type="text/javascript"></script>
+
+    <script src="/static/ace/mode-css.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-html.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-javascript.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-json.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-python.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-xml.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-c_cpp.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-clojure.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-coffee.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-c_cpp.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-css.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-diff.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-golang.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-html.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-java.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-javascript.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-json.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-latex.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-lua.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-markdown.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-perl.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-php.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-python.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-ruby.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-sql.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-svg.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-tcl.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-latex.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-textile.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-xml.js" type="text/javascript"></script>
+    <script src="/static/ace/mode-yaml.js" type="text/javascript"></script>
+
+    <script src="/static/anywhere/scripts/ajax_utils.js" type="text/javascript"></script>
+    <script src="/static/anywhere/scripts/editor.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $.extend(urls, {
+                save: '/user/paulovn/files/home/paulovn/SGPE/sgpe/templates/sgpe/detail.html',
+                run: '/user/paulovn/files/home/paulovn/SGPE/sgpe/templates/sgpe/detail.html' + '?run'
+            });
+            var filename = "/home/paulovn/SGPE/sgpe/templates/sgpe/detail.html";
+
+            
+              Anywhere.Editor.InitialiseAce(ace, urls, filename);
+              Anywhere.Editor.clearDirtyAndAddGutterWarnings({pyflakes_warnings: [] });
+            
+        });
+    </script>
+
+
+
+
+    </body>
+</html>
