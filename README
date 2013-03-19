@@ -8,18 +8,18 @@ Descrição do Processo de Trabalho
 =================================
 Esta descrição apresenta uma visão geral de todo o processo:
 
- Definir Cestas --> Vender Cestas, 
-		    Realizar Conferências, 
-		    Planejar Roteiros de Entrega
-						 --> Montar Cestas
-								   --> Realizar Entrega
+Definir Cestas--> Vender Cestas, 
+		  Realizar Conferências, 
+		  Planejar Roteiros de Entrega
+					      --> Montar Cestas
+								--> Realizar Entrega
 
 A demanda pelo desenvolvimento do sistema surgiu para tentar facilitar e organizar as atividades realizadas pelas pessoas envolvidas com esse trabalho. O sistema permite a gestão dos pedidos de cestas, vendedores, entregadores e roteiros de entrega.
 
 Descrição da Solução Tecnológica com Infraestrutura remota (cloud)
 ==================================================================
 
-O sistema desenvolvido é uma aplicação Web desenvolvida na linguagem python usando o framework Django (https://www.djangoproject.com) e utilizando a infraestrutura oferecida pelo site (https://www.pythonanywhere.com).Inicialmente está sendo usada uma conta sem custos e com recursos mínimos.
+O sistema desenvolvido é uma aplicação Web desenvolvida na linguagem python usando o framework Django (https://www.djangoproject.com) e utilizando a infraestrutura oferecida pelo site (https://www.pythonanywhere.com). Inicialmente está sendo usada uma conta sem custos e com recursos mínimos.
 
 Para acessar a aplicação:
 http://paulovn.pythonanywhere.com/admin
